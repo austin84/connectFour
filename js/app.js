@@ -6,6 +6,13 @@ const beginGameButton = document.getElementById("begin-game");
  */
 beginGameButton.addEventListener("click", (e) => {
   game.startGame();
-  this.style.display = "none";
+  beginGameButton.style.display = "none";
   document.getElementById("play-area").style.opacity = "1";
+});
+
+/**
+ * * Listens for keyboard presses
+ */
+document.addEventListener("keydown", (e) => {
+  game.handleKeydown(e);
 });
